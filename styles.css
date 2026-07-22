@@ -140,7 +140,7 @@ body {
     object-fit: cover;
     opacity: 0.3; /* Opacity lowered to keep text highly readable */
     z-index: 1;
-    border-radius: 0;
+    border-radius: 0 !important;
 }
 
 .hero-content {
