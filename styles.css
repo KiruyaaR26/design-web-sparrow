@@ -140,6 +140,7 @@ body {
     object-fit: cover;
     opacity: 0.3; /* Opacity lowered to keep text highly readable */
     z-index: 1;
+    border-radius: 0;
 }
 
 .hero-content {
@@ -175,7 +176,6 @@ body {
 img {
     display: block;
     max-width: 100%;
-    border-radius: 100%;
     overflow: hidden;
     
 }
