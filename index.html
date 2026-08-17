@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Optimasi SEO 100% -->
+    <title>Memora OS - Support & Error Reporting</title>
+    <meta name="description" content="Get help, report bugs, and find solutions for Memora OS. Read our frequently asked questions or contact the core team via the Telegram reporting tool.">
+    <meta name="keywords" content="Memora OS support, Linux help, report bug Memora, Linux FAQ, Memora OS errors">
+    <meta name="author" content="Memora OS Core Team">
+    <meta name="theme-color" content="#18181b">
+
+    <!-- Optimasi Performa 100% (Preconnect) -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://api.iconify.design">
+    <link rel="icon" type="image/svg+xml" href="assets/image/memora-logo-icon.svg">
+
+    <!-- CSS External -->
+    <link rel="stylesheet" href="assets/css/styleglobal.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/page/landingpage.css">
+    <link rel="stylesheet" href="assets/css/page/wiki.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/page/specifications.css">
+    
+    <!-- Script ditunda (defer) agar tidak memblokir render halaman -->
+    <script src="https://cdn.tailwindcss.com" defer></script>
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js" defer></script>
+</head>
+<body class="premium-dark min-h-screen flex flex-col">
+
+    <!-- Ambient Glow Background -->
+    <div class="ambient-glow glow-1 opacity-40"></div>
+    <div class="ambient-glow glow-2 opacity-40"></div>
+
+    <!-- Header / Navbar Sticky Tailwind -->
+    <header class="sticky top-0 z-50 py-4 px-4 sm:px-0">
+        <nav class="max-w-5xl mx-auto backdrop-blur-md border border-[#20b1c7]/20 rounded-full py-3 px-6 flex justify-between items-center shadow-[0_10px_30px_rgba(0,0,0,0.5)]" aria-label="Main Navigation">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-2 font-bold text-base text-slate-100 shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#20b1c7] rounded" aria-label="Memora OS Homepage">
+                <span class="w-8 h-8"><img src="assets/image/memora-logo.png" alt="Memora OS Logo" width="32" height="32" class="w-full h-full object-contain"></span>
+                <span>Memora OS</span>
+            </a>
+            
+            <!-- Hamburger Button (Aksesibilitas 100%) -->
+            <button id="menuBtn" class="sm:hidden text-slate-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#20b1c7] rounded p-1" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobileMenu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+            
+            <!-- Menu Utama -->
+            <ul id="mobileMenu" class="hidden sm:flex items-center gap-0 sm:gap-6 list-none m-0 p-0 absolute sm:static top-20 left-4 right-4 sm:left-auto sm:right-auto sm:w-auto bg-[#18181b]/95 sm:bg-transparent backdrop-blur-xl border border-[#20b1c7]/30 sm:border-0 rounded-2xl sm:rounded-none flex-col sm:flex-row py-2 sm:py-0 px-0 sm:px-0 shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_20px_rgba(32,177,199,0.15)] sm:shadow-none">
+                <li class="w-full sm:w-auto"><a href="index.html" class="text-sm text-slate-300 hover:text-[#20b1c7] transition-all duration-300 font-medium block py-3 px-6 sm:px-0 sm:py-0 relative group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#20b1c7] rounded">Home<span class="absolute bottom-1 left-6 right-6 sm:left-0 sm:right-0 h-[2px] bg-[#20b1c7] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span></a></li>
+                <li class="w-full sm:w-auto"><a href="iso.html" class="text-sm text-slate-300 hover:text-[#20b1c7] transition-all duration-300 font-medium block py-3 px-6 sm:px-0 sm:py-0 relative group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#20b1c7] rounded">Download<span class="absolute bottom-1 left-6 right-6 sm:left-0 sm:right-0 h-[2px] bg-[#20b1c7] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span></a></li>
+                <li class="w-full sm:w-auto"><a href="specification.html" class="text-sm text-slate-300 hover:text-[#20b1c7] transition-all duration-300 font-medium block py-3 px-6 sm:px-0 sm:py-0 relative group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#20b1c7] rounded">Specification<span class="absolute bottom-1 left-6 right-6 sm:left-0 sm:right-0 h-[2px] bg-[#20b1c7] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span></a></li>
+		        <li class="w-full sm:w-auto"><a href="wiki.html" class="text-sm text-slate-300 hover:text-[#20b1c7] transition-all duration-300 font-medium block py-3 px-6 sm:px-0 sm:py-0 relative group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#20b1c7] rounded">Wiki<span class="absolute bottom-1 left-6 right-6 sm:left-0 sm:right-0 h-[2px] bg-[#20b1c7] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span></a></li>
+                <li class="w-full sm:w-auto"><a href="documentation.html" class="text-sm text-slate-300 hover:text-[#20b1c7] transition-all duration-300 font-medium block py-3 px-6 sm:px-0 sm:py-0 relative group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#20b1c7] rounded">Documentation<span class="absolute bottom-1 left-6 right-6 sm:left-0 sm:right-0 h-[2px] bg-[#20b1c7] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span></a></li>
+                <li class="w-full sm:w-auto"><a href="support.html" class="text-sm text-[#20b1c7] transition-all duration-300 font-medium block py-3 px-6 sm:px-0 sm:py-0 relative group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#20b1c7] rounded" aria-current="page">Support<span class="absolute bottom-1 left-6 right-6 sm:left-0 sm:right-0 h-[2px] bg-[#20b1c7] scale-x-100 transition-transform duration-300 origin-left"></span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Support -->
+    <main class="flex-grow max-w-5xl mx-auto px-4 sm:px-6 w-full main-content relative z-10" style="padding-top: 4rem; padding-bottom: 4rem;">
+
+        <!-- Hero Header -->
+        <div class="wiki-hero-header" style="text-align: center; margin-bottom: 3rem;">
+            <div class="hero-badge-glass inline-flex items-center">
+                <span class="pulse-dot" aria-hidden="true"></span> HELP & SUPPORT CENTER
+            </div>
+            <h1 class="hero-title-massive">Need <span class="text-gradient">Assistance?</span></h1>
+            <p class="hero-subtitle-elegant" style="max-width: 600px; margin: 0 auto;">
+                Found an error, bug, or have questions regarding Memora OS? Submit your report or check out our common inquiries below.
+            </p>
+        </div>
+
+        <!-- Grid Support Formulir Tailwind -->
+        <div class="support-grid grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+            
+            <!-- Form Laporan Error / Bug -->
+            <section class="glass-panel" style="padding: 2.5rem; border-radius: 16px;" aria-labelledby="form-title">
+                <h2 id="form-title" style="margin-bottom: 1.5rem; color: #fff; font-size: 1.5rem; font-weight: bold;">Report an Error or Bug</h2>
+                
+                <form id="reportForm" style="display: flex; flex-direction: column; gap: 1.2rem;">
+                    <div>
+                        <!-- Label dihubungkan dengan id input menggunakan 'for' -->
+                        <label for="reportName" style="display: block; margin-bottom: 0.5rem; font-size: 0.9rem; color: rgba(255,255,255,0.8);">Your Name / Username</label>
+                        <input type="text" id="reportName" placeholder="e.g. jondu" required class="focus:outline-none focus:ring-2 focus:ring-[#20b1c7]" style="width: 100%; padding: 0.75rem 1rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #fff;">
+                    </div>
+                    <div>
+                        <label for="reportEmail" style="display: block; margin-bottom: 0.5rem; font-size: 0.9rem; color: rgba(255,255,255,0.8);">Email Address</label>
+                        <input type="email" id="reportEmail" placeholder="e.g. user@memora.io" required class="focus:outline-none focus:ring-2 focus:ring-[#20b1c7]" style="width: 100%; padding: 0.75rem 1rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #fff;">
+                    </div>
+                    <div>
+                        <label for="reportCategory" style="display: block; margin-bottom: 0.5rem; font-size: 0.9rem; color: rgba(255,255,255,0.8);">Issue Category</label>
+                        <select id="reportCategory" required class="focus:outline-none focus:ring-2 focus:ring-[#20b1c7]" style="width: 100%; padding: 0.75rem 1rem; background: #121212; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #fff;">
+                            <option value="Installation Error">Installation Error</option>
+                            <option value="Network / WiFi Issue">Network / WiFi Issue</option>
+                            <option value="Partitioning Problem">Partitioning Problem</option>
+                            <option value="General Question / Other">General Question / Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="reportMessage" style="display: block; margin-bottom: 0.5rem; font-size: 0.9rem; color: rgba(255,255,255,0.8);">Describe the Error / Question</label>
+                        <textarea id="reportMessage" rows="4" placeholder="Explain what happened and what error logs appeared..." required class="focus:outline-none focus:ring-2 focus:ring-[#20b1c7]" style="width: 100%; padding: 0.75rem 1rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #fff; resize: vertical;"></textarea>
+                    </div>
+                    <button type="submit" id="submitBtn" class="btn-glow focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[#18181b]" style="padding: 0.75rem; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; text-align: center; margin-top: 0.5rem;" aria-live="polite">Submit Report</button>
+                </form>
+            </section>
+
+            <!-- FAQ / Pertanyaan Umum -->
+            <section class="glass-panel" style="padding: 2.5rem; border-radius: 16px;" aria-labelledby="faq-title">
+                <h2 id="faq-title" style="margin-bottom: 1.5rem; color: #fff; font-size: 1.5rem; font-weight: bold;">Frequently Asked Questions</h2>
+                
+                <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    <article>
+                        <h3 style="color: var(--accent); margin-bottom: 0.3rem; font-size: 1.1rem; font-weight: 600;">Q: Why does my password not show up while typing in the installer?</h3>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.5;">A: This is completely normal! Linux hides password characters (no dots or stars) for security reasons. Just type your password blindly and press Enter.</p>
+                    </article>
+
+                    <article>
+                        <h3 style="color: var(--accent); margin-bottom: 0.3rem; font-size: 1.1rem; font-weight: 600;">Q: How do I select my city during timezone setup?</h3>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.5;">A: You can scroll through the list using your keyboard arrow keys. Once you find your city's number, press the letter <strong>q</strong> to lock your choice.</p>
+                    </article>
+
+                    <article>
+                        <h3 style="color: var(--accent); margin-bottom: 0.3rem; font-size: 1.1rem; font-weight: 600;">Q: Where can I check system logs after an error?</h3>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.5;">A: Memora OS features automated CLI session recording. You can check your logs inside <code style="background: rgba(255,255,255,0.1); padding: 0.1rem 0.3rem; border-radius: 4px;">/var/log/memora_cli.log</code>.</p>
+                    </article>
+
+                    <article>
+                        <h3 style="color: var(--accent); margin-bottom: 0.3rem; font-size: 1.1rem; font-weight: 600;">Q: How do I contribute to the Memora project?</h3>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.5;">A: You can visit our Codeberg repository or check out the Developer Documentation page for source tree guidelines and ISO building scripts.</p>
+                    </article>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer mt-auto py-8 border-t border-slate-800/80 text-center relative z-10 bg-[#18181b]/50 backdrop-blur-md">
+        <div class="container mx-auto px-4 footer-content flex flex-col items-center justify-center">
+            <p class="text-slate-500 text-sm mb-2">&copy; 2026 Memora OS Chapter. All rights reserved.</p>
+            <div class="flex items-center gap-4 text-sm">
+                <a href="privacy.html" class="text-slate-500 hover:text-[#20b1c7] transition-colors focus:outline-none focus-visible:underline">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="assets/js/main.js"></script>
+
+    <!-- SKRIP TELEGRAM BOT INTEGRATION -->
+    <script>
+        document.getElementById('reportForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Ambil data dari input form
+            const name = document.getElementById('reportName').value;
+            const email = document.getElementById('reportEmail').value;
+            const category = document.getElementById('reportCategory').value;
+            const message = document.getElementById('reportMessage').value;
+            const submitBtn = document.getElementById('submitBtn');
+
+            // Ubah teks tombol saat proses mengirim
+            submitBtn.innerText = "Sending to Telegram...";
+            submitBtn.disabled = true;
+
+            // Format pesan laporan
+            const textFormatted = `🚨 *NEW BUG REPORT - MEMORA OS* 🚨\n\n` +
+                                  `👤 *Name:* ${name}\n` +
+                                  `📧 *Email:* ${email}\n` +
+                                  `📂 *Category:* ${category}\n` +
+                                  `📝 *Description:* \n${message}`;
+
+            // Ganti token bot dan chat ID grup Telegram kamu di sini
+            const BOT_TOKEN = '8891940603:AAGqGrExfeZ_IKi9T1jeoKxkPACBHUpn1O4';
+            const CHAT_ID = '-5131218210';
+            
+            const telegramUrl = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+
+            // Kirim data menggunakan Fetch API
+            fetch(telegramUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    chat_id: CHAT_ID,
+                    text: textFormatted,
+                    parse_mode: 'Markdown'
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.ok) {
+                    alert('Success! Your bug report has been sent to the Memora OS Telegram group.');
+                    document.getElementById('reportForm').reset();
+                } else {
+                    alert('Failed to send report. Please verify your Bot Token & Chat ID.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred. Please check your internet connection.');
+            })
+            .finally(() => {
+                submitBtn.innerText = "Submit Report";
+                submitBtn.disabled = false;
+            });
+        });
+    </script>
+    
+    <!-- Script Hamburger Menu (A11y Optimized) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('menuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const isHidden = mobileMenu.classList.contains('hidden');
+                    
+                    mobileMenu.classList.toggle('hidden');
+                    mobileMenu.classList.toggle('flex');
+                    
+                    // Update state ARIA untuk Aksesibilitas
+                    menuBtn.setAttribute('aria-expanded', !isHidden);
+                });
+        
+                document.addEventListener('click', (e) => {
+                    const isClickInside = mobileMenu.contains(e.target) || menuBtn.contains(e.target);
+                    
+                    if (!isClickInside && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        mobileMenu.classList.remove('flex');
+                        menuBtn.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+
